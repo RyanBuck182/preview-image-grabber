@@ -4,17 +4,12 @@
   "version": "1.0",
   "description": "Get the preview image from a given link.",
   "permissions": ["activeTab"],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["Scripts/pig.js"]
-    }
-  ],
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html"
   },
   "icons": {
-    "48": "Images/pig48x48.png",
-    "128": "Images/pig128x128.png"
+    "48": "src/assets/pig48x48.png",
+    "128": "src/assets/pig128x128.png"
   }
 }
