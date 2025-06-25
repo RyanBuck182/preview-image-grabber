@@ -10,6 +10,9 @@
       "js": ["Scripts/pig.js"]
     }
   ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "icons": {
     "48": "Images/pig48x48.png",
     "128": "Images/pig128x128.png"
