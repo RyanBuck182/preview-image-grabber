@@ -9,5 +9,9 @@
       "matches": ["<all_urls>"],
       "js": ["Scripts/pig.js"]
     }
-  ]
+  ],
+  "icons": {
+    "48": "Images/pig48x48.png",
+    "128": "Images/pig128x128.png"
+  }
 }
