@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    width: 300px;
+    border: 5px solid black;
+    margin: 0;
+    padding-inline: 10px;
+    padding-block: 8px;
+}
+
+h1 {
+    font-size: 1.25em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+#status {
+    display: inline;
+}
+
+#outputLink {
+    display: block;
+    margin-top: 1em;
+}
