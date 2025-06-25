@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Preview Image Grabber",
+  "version": "1.0",
+  "description": "Get the preview image from a given link.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["Scripts/pig.js"]
+    }
+  ]
+}
