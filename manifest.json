@@ -6,7 +6,7 @@
   "permissions": ["activeTab"],
   "host_permissions": ["<all_urls>"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "src/popup/popup.html"
   },
   "icons": {
     "48": "src/assets/pig48x48.png",
