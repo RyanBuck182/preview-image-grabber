@@ -16,10 +16,20 @@ const outputLink = document.getElementById("outputLink");
 /** @type {HTMLImageElement} */
 const outputImage = document.getElementById("outputImage");
 
+/**
+ * Clean a link.
+ * @param {string} link - The link to clean.
+ * @returns {string} The cleaned link.
+ */
 const cleanLink = (link) => {
     return link.trim()
 }
 
+/**
+ * Validate a link.
+ * @param {string} link - The link to validate.
+ * @returns {boolean} Whether the link is valid.
+ */
 const validateLink = (link) => {
     if (!link) {
         fetchStatus.innerText = "Please enter a link.";
@@ -29,6 +39,10 @@ const validateLink = (link) => {
     return true;
 }
 
+/**
+ * Retrieve the preview image for a link.
+ * @returns {void}
+ */
 const retrievePreviewImage = async () => {
     const rawInput = linkInput.value
     const link = cleanLink(rawInput);
