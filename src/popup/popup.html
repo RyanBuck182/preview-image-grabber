@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="popup.css">
-    <script src="popup.js"></script>
+    <script src="popup.js" defer></script>
 </head>
+
 <body>
     <h1>Preview Image Grabber</h1>
 
     <input id="linkInput" placeholder="Enter Link..." />
     <button id="fetchButton">Get Preview Image</button>
-    <p id="status">Test status</p>
+    <p id="fetchStatus"></p>
 
-    <a id="outputLink" href="https://example.com/example-link">https://example.com/example-link</a>
-    <img id="outputImage" src="https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg?20240301091138"></img>
+    <a id="outputLink"></a>
+    <img id="outputImage"></img>
 </body>
+
 </html>
