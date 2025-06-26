@@ -21,8 +21,12 @@ const cleanLink = (link) => {
 }
 
 const validateLink = (link) => {
-    if (!link)
+    if (!link) {
         fetchStatus.innerText = "Please enter a link.";
+        return false;
+    }
+
+    return true;
 }
 
 const retrievePreviewImage = async () => {
