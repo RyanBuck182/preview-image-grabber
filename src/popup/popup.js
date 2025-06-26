@@ -31,8 +31,21 @@ const cleanLink = (link) => {
  * @returns {boolean} Whether the link is valid.
  */
 const validateLink = (link) => {
+    // Check if link is empty
     if (!link) {
         fetchStatus.innerText = "Please enter a link.";
+        return false;
+    }
+
+    // Check if link starts with http(s)
+    try {
+        const url = new URL(link);
+        if (!["http:", "https:"].includes(url.protocol)) {
+            fetchStatus.innerText = "Link must start with http:// or https://";
+            return false;
+        }
+    } catch (e) {
+        fetchStatus.innerText = "Invalid URL format.";
         return false;
     }
 
@@ -44,6 +57,8 @@ const validateLink = (link) => {
  * @returns {void}
  */
 const retrievePreviewImage = async () => {
+    fetchStatus.innerText = "Validating...";
+
     const rawInput = linkInput.value
     const link = cleanLink(rawInput);
     const linkIsValid = validateLink(link);
