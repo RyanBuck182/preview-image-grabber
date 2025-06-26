@@ -1,11 +1,9 @@
-# PIG: Preview Image Grabber
-
-![PIG logo](src/assets/pig128x128.png)
+# PIG: Preview Image Grabber <img src="src/assets/pig128x128.png" height=20></img>
 
 Input a link, get its preview image.
 Simple as that!
 
-![Demo image](demo/demo.png)
+![Demo image](images/demo.png)
 
 # Usage
 
