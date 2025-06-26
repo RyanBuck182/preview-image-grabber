@@ -28,6 +28,7 @@ const retrievePreviewImage = async () => {
             outputLink.href = ogImage;
             outputLink.innerText = ogImage;
             outputImage.src = ogImage;
+            fetchStatus.innerText = "";
         } else {
             fetchStatus.innerText = "No preview image found.";
         }
