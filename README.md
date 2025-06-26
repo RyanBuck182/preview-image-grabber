@@ -9,6 +9,11 @@ Simple as that!
 
 # Usage
 
-1. On any page, click the extension icon to the right of the search/url bar
-2. Paste your link into the input box
-3. Click the `Get Preview Image` button
+1. Open the chrome extension manager at chrome://extensions/
+1. Enable developer mode in the top right corner
+1. Click the `Load unpacked` button in the top left
+1. Select the extension folder
+1. On any page, click the extension icon to the right of the search/url bar at the top of the browser
+1. Find the PIG extension and click on it
+1. Paste your link into the input box
+1. Click the `Get Preview Image` button
