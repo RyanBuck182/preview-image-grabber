@@ -13,8 +13,24 @@ const outputLink = document.getElementById("outputLink");
 /** @type {HTMLImageElement} */
 const outputImage = document.getElementById("outputImage");
 
+const cleanLink = (link) => {
+    return link.trim()
+}
+
+const validateLink = (link) => {
+    if (!link)
+        fetchStatus.innerText = "Please enter a link.";
+}
+
 const retrievePreviewImage = async () => {
-    const link = linkInput.value;
+    const rawInput = linkInput.value
+    const link = cleanLink(rawInput);
+    const linkIsValid = validateLink(link);
+
+    // Quit if link is invalid
+    if (!linkIsValid)
+        return;
+
     fetchStatus.innerText = "Fetching...";
 
     try {
