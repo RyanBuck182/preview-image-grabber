@@ -1,3 +1,6 @@
+/** @type {DOMParser} */
+const domParser = new DOMParser();
+
 /** @type {HTMLInputElement} */
 const linkInput = document.getElementById("linkInput");
 
@@ -34,16 +37,18 @@ const retrievePreviewImage = async () => {
     fetchStatus.innerText = "Fetching...";
 
     try {
+        // Grab the page at the link and parse it
         const response = await fetch(link);
-        const html = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-        const ogImage = doc.querySelector('meta[property="og:image"]')?.content;
+        const responseText = await response.text();
+        const responseHtml = domParser.parseFromString(responseText, "text/html");
+        
+        // Retrieve the preview image
+        const previewImage = responseHtml.querySelector('meta[property="og:image"]')?.content;
 
-        if (ogImage) {
-            outputLink.href = ogImage;
-            outputLink.innerText = ogImage;
-            outputImage.src = ogImage;
+        if (previewImage) {
+            outputLink.href = previewImage;
+            outputLink.innerText = previewImage;
+            outputImage.src = previewImage;
             fetchStatus.innerText = "";
         } else {
             fetchStatus.innerText = "No preview image found.";
