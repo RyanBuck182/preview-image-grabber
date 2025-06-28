@@ -15,3 +15,5 @@ Simple as that!
 1. Find the PIG extension and click on it
 1. Paste your link into the input box
 1. Click the `Get Preview Image` button
+
+(eventually it will be on the chrome web store, making this easier)
